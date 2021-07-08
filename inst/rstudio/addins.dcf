@@ -1,4 +1,4 @@
 Name: Create a new Rmd comment
 Description: Inserts an `<!-` with unique id,timestamp,username and comment `->`
-Binding: new_comment
+Binding: new_rmd_comment
 Interactive: false
