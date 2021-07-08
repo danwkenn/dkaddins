@@ -17,7 +17,7 @@ generate_hex <- function(len = 20){
   paste0(sample(c(LETTERS,letters,0:9),size = len, replace = TRUE),collapse = "")
 }
 
-new_comment <- function(){
+new_rmd_comment <- function(){
   id <- generate_hex()
   user <- Sys.info()[["user"]]
   date <- Sys.time()
