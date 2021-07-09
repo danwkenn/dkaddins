@@ -21,10 +21,11 @@ new_rmd_comment <- function(){
   id <- generate_hex()
   user <- Sys.info()[["user"]]
   date <- Sys.time()
-  text <- paste0("<!--id=",id,";user=",user,";time=",date,";comment=-->")
+  text <- paste0("<!--id=",id,";user=",user,";time=",date,";comment=\n\n-->")
   rstudioapi::insertText(text = text)
   context <- rstudioapi::getSourceEditorContext()
   new_position <- context$selection[[1]]$range$start
-  new_position[[2]] <- new_position[[2]] - 3
+  new_position[[2]] <- 1
+  new_position[[1]] <- new_position[[1]] - 1
   rstudioapi::setCursorPosition(new_position)
 }
